@@ -21,7 +21,7 @@
 
 </style>
 <h1>CHEESE</h1>
-<button onclick="buy()">BUY! only $999.99</button>
+<button id="yes" onclick="buy()">BUY! only $999.99</button>
 
 <script>
 function buy(){
@@ -68,5 +68,7 @@ function buy(){
       }
     getlocation()
     }
+  document.getElementById("yes").addEventListener("click", buy);
+
 };
 </script>
