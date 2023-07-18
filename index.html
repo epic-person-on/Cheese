@@ -1,31 +1,9 @@
-<style>
-  .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-  }
-  .button {
-  transition-duration: 0.4s;
-}
-
-.button:hover {
-  background-color: #013220; 
-  color: white;
-}
-
-</style>
-<h1>CHEESE</h1>
-<button id="yes" onclick="buy()">BUY! only $999.99</button>
-
-<script>
-function buy(){
-  function getLocation() {
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy cheese</title>
+  <script>
+    function getLocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       } else {
@@ -66,9 +44,11 @@ function buy(){
           alert("An unknown error occurred.");
           break;
       }
-    getlocation()
     }
-  document.getElementById("yes").addEventListener("click", buy);
-
-};
-</script>
+  </script>
+</head>
+<body>
+  <h1>Cheese!!!</h1>
+  <button onclick="getLocation()">Buy for only $999.99</button>
+</body>
+</html>
