@@ -4,6 +4,7 @@
   <title>Buy cheese</title>
   <script>
     function getLocation() {
+      Alert("you will need to enable location to find your nearest cheese dealership")
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       } else {
@@ -21,7 +22,7 @@
         .then(response => response.json())
         .then(data => {
           const address = data.display_name;
-          alert("Your address: " + address);
+          alert("Your nearest cheese dealership " + address);
         })
         .catch(error => {
           console.error("Error:", error);
