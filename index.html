@@ -25,12 +25,16 @@
       background-color: #4CAF50;
       color: white;
     }
+    .body{
+      border-width: 5px;
+      border-style: solid;
+      border-color: black;
+    }
   </style>
 <head>
   <title>Buy cheese</title>
   <script>
     function getLocation() {
-      alert("you will need to enable location to find your nearest cheese dealership")
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       } else {
@@ -59,7 +63,7 @@
     function showError(error) {
       switch (error.code) {
         case error.PERMISSION_DENIED:
-          alert("User denied the request for Geolocation.");
+          alert("Location is required to find your nearest cheese dealership");
           break;
         case error.POSITION_UNAVAILABLE:
           alert("Location information is unavailable.");
@@ -75,7 +79,10 @@
   </script>
 </head>
 <body>
+  <center>
   <h1>Cheese!!!</h1>
+  <img src="https://shopkitchenkettle.com/cdn/shop/products/hickorysmokedgoudam_374eb0b9-1f94-4ba1-8795-a497ff444ac4_800x.png?v=1599932337"></img>
   <button onclick="getLocation()" class="button1">Buy for only $999.99</button>
+  </center>
 </body>
 </html>
